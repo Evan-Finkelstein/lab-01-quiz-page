@@ -10,6 +10,8 @@ const info = document.getElementById("info-section");
 const list = document.getElementById("list");
 const banner = document.getElementById("banner");
 const main = document.getElementById("main");
+const refresh = document.getElementById("refresh");
+
 
 
 button.addEventListener('click', () => {
@@ -38,11 +40,13 @@ button.addEventListener('click', () => {
         answerCount++;
     }
     
-alert('Quiz complete! Check the page for your results')
+alert('Yay. You did it. Absolutely breathtaking.')
     info.classList.toggle('hidden');
     button.classList.toggle('hidden');
     list.classList.toggle('hidden');
     banner.classList.toggle('hidden');
+    refresh.classList.toggle('hidden');
+
 
 if (answerCount === 4) {
     span.textContent = `Wow ${userName}, ${answerCount} out of 4 is a perfect score! You are approaching platypus levels of coolness.`;
@@ -52,5 +56,9 @@ if (answerCount === 4) {
     main.classList.toggle('content3');
 }
 
+    })
+
+    refresh.addEventListener('click', () => {
+        document.location.reload()
     })
 
