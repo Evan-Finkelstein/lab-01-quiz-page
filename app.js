@@ -11,6 +11,8 @@ const list = document.getElementById("list");
 const banner = document.getElementById("banner");
 const main = document.getElementById("main");
 const refresh = document.getElementById("refresh");
+const picture1 = document.getElementById("pic1");
+const picture2 = document.getElementById("pic2");
 
 
 
@@ -53,9 +55,13 @@ const percent =  answerCount / 4 * 100
 if (answerCount === 4) {
     span.textContent = `Wow ${userName}, you got ${answerCount} of 4 or ${percent}% which is a perfect score! You are approaching platypus levels of coolness.`;
     main.classList.toggle('content2');
+    picture1.classList.toggle('hidden');
+
 }else{
     span.textContent = `Meh ${userName}, You got ${answerCount}  of 4 or  ${percent}%. You're still significantly less cool than a platypus.`;
     main.classList.toggle('content3');
+    picture2.classList.toggle('hidden');
+
 }
 
     })
