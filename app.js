@@ -10,6 +10,8 @@ const info = document.getElementById("info-section");
 const list = document.getElementById("list");
 const banner = document.getElementById("banner");
 const main = document.getElementById("main");
+const refresh = document.getElementById("refresh");
+
 
 
 button.addEventListener('click', () => {
@@ -38,19 +40,27 @@ button.addEventListener('click', () => {
         answerCount++;
     }
     
-alert('Quiz complete! Check the page for your results')
+alert('Yay. You did it. Absolutely breathtaking.')
     info.classList.toggle('hidden');
     button.classList.toggle('hidden');
     list.classList.toggle('hidden');
     banner.classList.toggle('hidden');
+    refresh.classList.toggle('hidden');
+
+const percent =  answerCount / 4 * 100
+
 
 if (answerCount === 4) {
-    span.textContent = `Wow ${userName}, ${answerCount} out of 4 is a perfect score! You are approaching platypus levels of coolness.`;
+    span.textContent = `Wow ${userName}, you got ${answerCount} of 4 or ${percent}% which is a perfect score! You are approaching platypus levels of coolness.`;
     main.classList.toggle('content2');
 }else{
-    span.textContent = `Meh ${userName}, You got ${answerCount} right out of 4. You're still significantly less cool than a platypus.`;
+    span.textContent = `Meh ${userName}, You got ${answerCount}  of 4 or  ${percent}%. You're still significantly less cool than a platypus.`;
     main.classList.toggle('content3');
 }
 
+    })
+
+    refresh.addEventListener('click', () => {
+        document.location.reload()
     })
 
