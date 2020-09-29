@@ -13,6 +13,9 @@ const main = document.getElementById('main');
 const refresh = document.getElementById('refresh');
 const picture1 = document.getElementById('pic1');
 const picture2 = document.getElementById('pic2');
+const picture3 = document.getElementById('pic3');
+const title2 = document.getElementById('title2');
+const list2 = document.getElementById('list2');
 
 
 
@@ -48,6 +51,10 @@ alert('Yay. You did it. Absolutely breathtaking.')
     list.classList.toggle('hidden');
     banner.classList.toggle('hidden');
     refresh.classList.toggle('hidden');
+    picture3.classList.toggle('hidden');
+    title2.classList.toggle('hidden');
+    list2.classList.toggle('hidden');
+
 
 const percent = Math.floor(answerCount / 4 * 100);
 
