@@ -49,7 +49,8 @@ alert('Yay. You did it. Absolutely breathtaking.')
     banner.classList.toggle('hidden');
     refresh.classList.toggle('hidden');
 
-const percent =  answerCount / 4 * 100
+const percent = Math.floor(answerCount / 4 * 100);
+
 
 
 if (answerCount === 4) {
@@ -66,7 +67,7 @@ if (answerCount === 4) {
 
     })
 
-    refresh.addEventListener('click', () => {
+refresh.addEventListener('click', () => {
         document.location.reload()
     })
 
