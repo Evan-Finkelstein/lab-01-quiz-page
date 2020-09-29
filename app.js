@@ -16,6 +16,8 @@ const picture2 = document.getElementById('pic2');
 const picture3 = document.getElementById('pic3');
 const title2 = document.getElementById('title2');
 const list2 = document.getElementById('list2');
+const places = document.getElementById('places');
+const placeList = document.getElementById('list2');
 
 
 
